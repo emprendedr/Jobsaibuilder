@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Viral Downline - Tu Sistema de Automatización con IA</title>
+    <title>Jobs AI Builders - Tu Sistema de Automatización con IA</title>
     <style>
-        /* ===== ESTILOS GENERALES - PREVENIR SCROLL HORIZONTAL ===== */
+        /* ===== ESTILOS GENERALES - SOLO PREVENIR SCROLL HORIZONTAL ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        html, body {
-            overflow-x: hidden; /* Elimina scroll horizontal */
+        html {
+            overflow-x: hidden; /* Solo elimina scroll horizontal */
             width: 100%;
-            position: relative;
         }
         body {
+            overflow-x: hidden; /* Solo elimina scroll horizontal */
             background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
             color: #f0f8ff;
             line-height: 1.7;
@@ -29,7 +29,6 @@
             margin: 0 auto;
             padding: 1.5rem 1.8rem;
             width: 100%;
-            overflow-x: hidden; /* Previene overflow horizontal */
         }
 
         /* ===== CABECERA OPTIMIZADA PARA MÓVILES ===== */
@@ -49,7 +48,7 @@
             color: #40e0d0;
             text-shadow: 0 0 10px rgba(64, 224, 208, 0.5);
             line-height: 1.2;
-            word-wrap: break-word; /* Previene overflow de texto */
+            word-wrap: break-word;
         }
         .tagline {
             font-size: 1.3rem;
@@ -614,18 +613,13 @@
                 padding: 2rem 1rem;
             }
         }
-        
-        /* Regla adicional para prevenir scroll horizontal en todos los casos */
-        * {
-            max-width: 100%;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Cabecera optimizada para móviles -->
         <header>
-            <h1>AI Viral Downline</h1>
+            <h1>Jobs AI Builders</h1>
             <p class="tagline">Deja que la IA Construya Tu Línea Descendente Mientras Tú Relajas</p>
             <p class="tagline">Emily explica tu negocio, responde preguntas y cierra a tus prospectos — las 24 horas del día.</p>
         </header>
@@ -670,7 +664,7 @@
             <h2 class="section-title">Presentación Completa del Sistema</h2>
             <div class="video-wrapper">
                 <iframe src="https://www.youtube.com/embed/A8bGvBjWgkw"
-                        title="Presentación Completa del Programa AIViralDownline"
+                        title="Presentación Completa del Programa AI Viral Downline"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                 </iframe>
@@ -787,7 +781,7 @@
 
                 <!-- Línea de derechos de autor -->
                 <div class="footer-bottom">
-                    <p>Todos los derechos reservados © <span id="currentYear"></span> AI Viral Downline.</p>
+                    <p>Todos los derechos reservados © 2025 Jobs AI Builders.</p>
                     <p>Este sitio opera de manera independiente.</p>
                 </div>
             </div>
@@ -839,7 +833,7 @@
 
     <script>
         // Año actual en el pie de página
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.getElementById('currentYear')?.textContent = new Date().getFullYear();
 
         // Chatbot Variables
         const chatbotIcon = document.getElementById('chatbotIcon');
@@ -1109,13 +1103,6 @@
                 chatbotIcon.click();
             }
         });
-        
-        // Prevenir scroll horizontal en dispositivos táctiles
-        document.addEventListener('touchmove', function(e) {
-            if (window.innerWidth <= document.documentElement.clientWidth) {
-                e.preventDefault();
-            }
-        }, { passive: false });
     </script>
 </body>
 </html>
