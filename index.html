@@ -120,6 +120,151 @@
             font-size: 1.2rem;
         }
 
+        /* ===== SECCIÓN DE PDF - NUEVA SECCIÓN ===== */
+        .pdf-section {
+            background: linear-gradient(135deg, rgba(15, 32, 39, 0.9), rgba(32, 58, 67, 0.9));
+            border-left: 6px solid #FF6B6B;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pdf-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255, 107, 107, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+        
+        .pdf-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .pdf-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .pdf-description {
+            font-size: 1.1rem;
+            color: #e0ffff;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .pdf-preview {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .pdf-preview:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #40e0d0;
+            transform: translateY(-5px);
+        }
+        
+        .pdf-preview-title {
+            color: #FFD700;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .pdf-preview-title svg {
+            fill: #FFD700;
+        }
+        
+        .pdf-details {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            text-align: left;
+        }
+        
+        .pdf-details h4 {
+            color: #98fb98;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+        
+        .pdf-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .pdf-details li {
+            margin-bottom: 0.7rem;
+            padding-left: 1.8rem;
+            position: relative;
+            color: #b0e0e6;
+        }
+        
+        .pdf-details li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #40e0d0;
+            font-weight: bold;
+        }
+        
+        .pdf-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(90deg, #FF6B6B, #FF8E53);
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            padding: 1.2rem 3rem;
+            border-radius: 12px;
+            text-decoration: none;
+            margin: 1.5rem auto;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 6px 0 #CC5555, 0 10px 25px rgba(255, 107, 107, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            top: 0;
+        }
+        
+        .pdf-button:hover {
+            top: -3px;
+            box-shadow: 0 8px 0 #CC5555, 0 15px 30px rgba(255, 107, 107, 0.6);
+            background: linear-gradient(90deg, #FF8E53, #FF6B6B);
+            transform: scale(1.05);
+        }
+        
+        .pdf-button svg {
+            fill: white;
+            width: 24px;
+            height: 24px;
+        }
+
         /* ===== SECCIÓN DE LLAMADO A LA ACCIÓN (CTA) - ACTUALIZADA ===== */
         .cta-section {
             text-align: center;
@@ -562,7 +707,7 @@
                 font-size: 1.1rem;
                 padding: 0 5px;
             }
-            .register-button, .telegram-button {
+            .register-button, .telegram-button, .pdf-button {
                 padding: 1rem 2rem;
                 font-size: 1.1rem;
                 width: 100%;
@@ -597,6 +742,12 @@
             .feature-card {
                 padding: 1.2rem;
             }
+            .pdf-icon {
+                font-size: 3rem;
+            }
+            .pdf-preview {
+                padding: 1.5rem;
+            }
         }
         
         @media (max-width: 480px) {
@@ -611,6 +762,10 @@
             }
             .cta-section {
                 padding: 2rem 1rem;
+            }
+            .pdf-button {
+                font-size: 1rem;
+                padding: 1rem 1.5rem;
             }
         }
     </style>
@@ -668,6 +823,53 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                 </iframe>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: PDF DE CANVA -->
+        <section class="section pdf-section">
+            <h2 class="section-title">📘 Guía Completa en PDF</h2>
+            
+            <div class="pdf-content">
+                <div class="pdf-icon">📘</div>
+                
+                <p class="pdf-description">
+                    Descarga nuestra **Guía Completa de AI Viral Downline** en formato PDF. Este documento contiene toda la información detallada que necesitas para entender completamente el sistema, la matriz de compensación y cómo comenzar tu viaje hacia los ingresos residuales.
+                </p>
+                
+                <div class="pdf-preview">
+                    <div class="pdf-preview-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z"/>
+                            <path d="M10 9h6v2h-6zM10 12h4v2h-4zM10 15h6v2h-6z"/>
+                        </svg>
+                        Guía Completa AI Viral Downline
+                    </div>
+                    
+                    <div class="pdf-details">
+                        <h4>🎯 Lo que encontrarás en esta guía:</h4>
+                        <ul>
+                            <li>Explicación detallada del sistema AI Viral Downline</li>
+                            <li>Desglose completo de la matriz 3x8</li>
+                            <li>Estrategias para maximizar tus ingresos</li>
+                            <li>Pasos para comenzar tu prueba gratuita</li>
+                            <li>Preguntas frecuentes y respuestas</li>
+                            <li>Contactos de soporte y comunidad</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a href="https://www.canva.com/design/DAG8PbAxxn8/M3aOVhlhYAp4399dkuZDcw/view?utm_content=DAG8PbAxxn8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h786681e006" 
+                   class="pdf-button" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                    </svg>
+                    Descargar Guía PDF
+                </a>
+                
+                <p style="color: #b0e0e6; font-size: 0.9rem; margin-top: 1rem;">
+                    <small>📱 Compatible con todos los dispositivos • 📄 Formato PDF de alta calidad • 🔒 Acceso instantáneo</small>
+                </p>
             </div>
         </section>
 
