@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jobs AI Builders - Tu Sistema de Automatización con IA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         /* ===== ESTILOS GENERALES ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         html {
             overflow-x: hidden;
@@ -31,7 +32,7 @@
             width: 100%;
         }
 
-        /* ===== CABECERA ===== */
+        /* ===== CABECERA ACTUALIZADA ===== */
         header {
             text-align: center;
             padding: 2.5rem 1rem;
@@ -41,7 +42,26 @@
             border: 1px solid rgba(64, 224, 208, 0.3);
             width: 100%;
             box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
         }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(64, 224, 208, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
@@ -49,13 +69,40 @@
             text-shadow: 0 0 10px rgba(64, 224, 208, 0.5);
             line-height: 1.2;
             word-wrap: break-word;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
         }
-        .tagline {
-            font-size: 1.3rem;
-            color: #b0e0e6;
+        
+        .main-tagline {
+            font-size: 1.4rem;
+            color: #FFD700;
             max-width: 800px;
+            margin: 0 auto 1.5rem;
+            word-wrap: break-word;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .sub-tagline {
+            font-size: 1.2rem;
+            color: #b0e0e6;
+            max-width: 900px;
             margin: 0 auto;
             word-wrap: break-word;
+            line-height: 1.6;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border-left: 4px solid #FF6B6B;
+            font-family: 'Montserrat', sans-serif;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .highlight-text {
+            color: #FFD700;
+            font-weight: 600;
+            font-style: italic;
         }
 
         /* ===== SECCIONES GENERALES ===== */
@@ -69,6 +116,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             width: 100%;
             box-sizing: border-box;
+            animation: fadeIn 0.8s ease-out;
         }
         .section-title {
             color: #40e0d0;
@@ -76,6 +124,8 @@
             margin-bottom: 1.5rem;
             text-align: center;
             word-wrap: break-word;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
         }
 
         /* ===== NUEVA SECCIÓN: IMAGINA GENERAR INGRESOS ===== */
@@ -110,6 +160,7 @@
             margin-bottom: 2rem;
             text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
             animation: glow 2s ease-in-out infinite alternate;
+            font-family: 'Poppins', sans-serif;
         }
         
         @keyframes glow {
@@ -134,14 +185,14 @@
         }
         
         .money-image {
-            width: 300px;
+            width: 320px;
             height: 250px;
             border-radius: 15px;
             overflow: hidden;
             position: relative;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
             opacity: 0;
-            transform: translateY(50px);
+            transform: translateY(50px) scale(0.9);
             transition: all 0.8s ease;
             cursor: pointer;
             border: 3px solid transparent;
@@ -167,23 +218,24 @@
         
         .money-image.visible {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0) scale(1);
         }
         
         .money-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            transition: transform 0.5s ease, filter 0.5s ease;
         }
         
         .money-image:hover img {
-            transform: scale(1.1);
+            transform: scale(1.15);
+            filter: brightness(1.1) contrast(1.1);
         }
         
         .money-image:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.6);
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(255, 107, 107, 0.7);
         }
         
         .image-caption {
@@ -191,13 +243,15 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(15, 32, 39, 0.9);
+            background: linear-gradient(to top, rgba(15, 32, 39, 0.95), transparent);
             color: #FFD700;
-            padding: 1rem;
+            padding: 1.2rem;
             font-weight: bold;
             transform: translateY(100%);
             transition: transform 0.5s ease;
             text-align: center;
+            font-size: 1.1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
         
         .money-image:hover .image-caption {
@@ -214,6 +268,7 @@
             background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
             border-left: 4px solid #40e0d0;
+            animation: fadeInUp 1s ease-out 0.5s both;
         }
         
         .imagine-highlight {
@@ -224,17 +279,23 @@
         
         /* Animación de conteo */
         .count-animation {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: bold;
             color: #FFD700;
             margin: 1rem 0;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-            animation: countPulse 1.5s ease-in-out infinite;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+            animation: countPulse 1.5s ease-in-out infinite, float 3s ease-in-out infinite;
+            font-family: 'Poppins', sans-serif;
         }
         
         @keyframes countPulse {
             0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+            50% { transform: scale(1.15); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
         
         @keyframes fadeInUp {
@@ -248,12 +309,39 @@
             }
         }
         
-        /* ===== SECCIÓN DE COMPARTIR REDES SOCIALES ===== */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* ===== SECCIÓN DE COMPARTIR REDES SOCIALES ACTUALIZADA ===== */
         .share-section {
             background: linear-gradient(135deg, rgba(32, 58, 67, 0.9), rgba(44, 83, 100, 0.9));
             border-left: 6px solid #4CAF50;
             text-align: center;
             margin-top: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .share-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(76, 175, 80, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+        
+        .share-content {
+            position: relative;
+            z-index: 1;
         }
         
         .share-title {
@@ -261,6 +349,7 @@
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
             text-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+            font-family: 'Poppins', sans-serif;
         }
         
         .share-cta {
@@ -271,6 +360,7 @@
             margin-left: auto;
             margin-right: auto;
             line-height: 1.5;
+            font-weight: 500;
         }
         
         .share-buttons {
@@ -285,28 +375,49 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 1rem 2rem;
-            border-radius: 12px;
+            gap: 12px;
+            padding: 1.2rem 2.5rem;
+            border-radius: 15px;
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1rem;
-            transition: all 0.3s ease;
-            min-width: 200px;
-            box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+            min-width: 220px;
+            box-shadow: 0 8px 0 rgba(0, 0, 0, 0.2);
             position: relative;
             top: 0;
+            transform: translateY(0);
+            opacity: 0;
+            animation: slideIn 0.6s ease-out forwards;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.5px;
+        }
+        
+        .share-button:nth-child(1) { animation-delay: 0.2s; }
+        .share-button:nth-child(2) { animation-delay: 0.4s; }
+        .share-button:nth-child(3) { animation-delay: 0.6s; }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         .share-button:hover {
-            top: -3px;
-            box-shadow: 0 9px 0 rgba(0, 0, 0, 0.2);
-            transform: scale(1.05);
+            top: -5px;
+            box-shadow: 0 12px 0 rgba(0, 0, 0, 0.2);
+            transform: scale(1.08);
+            letter-spacing: 1px;
         }
         
         .share-button:active {
             top: 0;
-            box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
         }
         
         .share-button.facebook {
@@ -325,14 +436,36 @@
         }
         
         .share-icon {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .share-button:hover .share-icon {
+            transform: scale(1.2) rotate(5deg);
         }
         
         .share-note {
             color: #87ceeb;
-            font-size: 0.95rem;
+            font-size: 1rem;
             margin-top: 1.5rem;
             font-style: italic;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+        
+        .website-link {
+            color: #FFD700;
+            font-weight: bold;
+            text-decoration: none;
+            border-bottom: 2px dotted #FFD700;
+            transition: all 0.3s ease;
+        }
+        
+        .website-link:hover {
+            color: #FF8E53;
+            border-bottom: 2px solid #FF8E53;
         }
 
         /* ===== CONTENEDORES DE VIDEO ===== */
@@ -345,6 +478,7 @@
             margin-top: 1rem;
             background: #000;
             width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
         .video-wrapper iframe {
             position: absolute;
@@ -510,7 +644,14 @@
             border-left: 4px solid #40e0d0;
             width: 100%;
             box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(64, 224, 208, 0.2);
+        }
+        
         .feature-card h3 {
             color: #98fb98;
             margin-bottom: 0.8rem;
@@ -547,11 +688,6 @@
             margin-bottom: 1rem;
             display: inline-block;
             animation: float 3s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
         }
         
         .pdf-description {
@@ -1055,6 +1191,13 @@
                 line-height: 1.1;
                 padding: 0 5px;
             }
+            .main-tagline {
+                font-size: 1.2rem;
+            }
+            .sub-tagline {
+                font-size: 1rem;
+                padding: 1rem;
+            }
             .tagline { 
                 font-size: 1.1rem; 
                 line-height: 1.3;
@@ -1165,6 +1308,9 @@
             h1 {
                 font-size: 1.8rem;
             }
+            .main-tagline {
+                font-size: 1.1rem;
+            }
             .container {
                 padding: 0.8rem 1rem;
             }
@@ -1192,11 +1338,16 @@
 </head>
 <body>
     <div class="container">
-        <!-- Cabecera -->
+        <!-- Cabecera Actualizada -->
         <header>
-            <h1>Jobs AI Builders</h1>
-            <p class="tagline">Deja que la IA Construya Tu Línea Descendente Mientras Tú Relajas</p>
-            <p class="tagline">Emily explica tu negocio, responde preguntas y cierra a tus prospectos — las 24 horas del día.</p>
+            <div class="header-content">
+                <h1>Jobs AI Builders</h1>
+                <p class="main-tagline">No necesitas ser experto, creador de contenido ni vendedor.</p>
+                <p class="sub-tagline">Solo aprender a usar la IA de forma inteligente. 
+                    <span class="highlight-text">La IA se encarga del trabajo repetitivo mientras tú aprendes a monetizar en automático. 
+                    Haz este 2026 el mejor año de tu vida con el apalancamiento de Emily, las redes sociales y un sistema que te apoya a todo momento.</span>
+                </p>
+            </div>
         </header>
 
         <!-- Primer video (Intro de Emily) -->
@@ -1243,38 +1394,6 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                 </iframe>
-            </div>
-        </section>
-
-        <!-- Sección: Tutorial de YouTube EMBED -->
-        <section class="section tutorial-section">
-            <div class="tutorial-header">
-                <div class="tutorial-icon">🎬</div>
-                <h2 class="section-title" style="margin: 0;">Tutorial Paso a Paso</h2>
-            </div>
-            
-            <div class="tutorial-content">
-                <p class="tutorial-description">
-                    Mira este tutorial completo para entender el proceso de registro y activación de tu cuenta en AI Viral Downline. 
-                    Aprende todo lo necesario para comenzar tu viaje hacia los ingresos residuales.
-                </p>
-                
-                <!-- Video de YouTube EMBED -->
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/Gdy_rvXfcpA?si=5CgSBSRhHh5mkwxk"
-                            title="Tutorial Completo AI Viral Downline - Registro y Activación"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                    </iframe>
-                </div>
-                
-                <div class="tutorial-note">
-                    <h4>📋 Lo que aprenderás en este tutorial:</h4>
-                    <p>• Cómo funciona el sistema de automatización completo<br>
-                       • Proceso paso a paso para activar tu cuenta correctamente<br>
-                       • Cómo configurar tu perfil y comenzar a construir tu red<br>
-                       • Estrategias para maximizar tus ingresos desde el inicio</p>
-                </div>
             </div>
         </section>
 
@@ -1410,18 +1529,19 @@
                 <div class="images-container" id="imagesContainer">
                     <!-- Imágenes con efectos animados - URLs actualizadas -->
                     <div class="money-image">
-                        <img src="https://i.postimg.cc/6TG1Wxv0/IMG-4993.jpg" alt="Ingresos repetidos de $25" loading="lazy">
-                        <div class="image-caption">¡Gana $25 repetidamente!</div>
+                        <img src="https://i.postimg.cc/jL2QhGHn/Ai-Viral.jpg" alt="AI Viral Downline Sistema" loading="lazy">
+                        <div class="image-caption">Sistema AI Viral Downline</div>
                     </div>
                     
                     <div class="money-image">
-                        <img src="https://i.postimg.cc/F1Rk3hZp/DAD521F3-0680-4774-87B1-70D458CA19B3.jpg" alt="Cobra el mismo día" loading="lazy">
-                        <div class="image-caption">Cobra el mismo día</div>
+                        <img src="https://i.postimg.cc/56yqmZBC/Aiviraldownline.png" alt="Automatización con IA" loading="lazy">
+                        <div class="image-caption">Automatización Inteligente</div>
                     </div>
                     
+                    <!-- Mantener tercera imagen para diseño balanceado -->
                     <div class="money-image">
-                        <img src="https://i.postimg.cc/ts59BxR2/30a4b570-9bad-4f0c-b00b-34c7f50d2104.jpg" alt="Ingresos en la primera semana" loading="lazy">
-                        <div class="image-caption">Primera semana de ingresos</div>
+                        <img src="https://i.postimg.cc/jL2QhGHn/Ai-Viral.jpg" alt="Ingresos Automáticos" loading="lazy">
+                        <div class="image-caption">Ingresos Automáticos</div>
                     </div>
                 </div>
                 
@@ -1446,7 +1566,7 @@
                         Mira el tutorial completo y pídele el link de registro a quien te presentó esta gran oportunidad.
                     </p>
                     
-                    <!-- Video tutorial movido aquí -->
+                    <!-- Video tutorial SOLO aquí (eliminado el duplicado) -->
                     <div class="video-wrapper" style="margin: 2rem 0;">
                         <iframe src="https://www.youtube.com/embed/Gdy_rvXfcpA?si=5CgSBSRhHh5mkwxk"
                                 title="Tutorial Completo AI Viral Downline - Registro y Activación"
@@ -1486,36 +1606,38 @@
             <p><small>Consulta en nuestro grupo de Telegram para detalles adicionales</small></p>
         </section>
 
-        <!-- NUEVA SECCIÓN: Compartir en Redes Sociales -->
+        <!-- NUEVA SECCIÓN: Compartir en Redes Sociales ACTUALIZADA -->
         <section class="section share-section">
-            <h2 class="share-title">¡Comparte y Gana!</h2>
-            
-            <p class="share-cta">Comparte este sitio web y gana $25 una y otra vez con tu código personalizado</p>
-            
-            <div class="share-buttons">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://tusitio.com" 
-                   class="share-button facebook" target="_blank">
-                    <span class="share-icon">📘</span>
-                    Compartir en Facebook
-                </a>
+            <div class="share-content">
+                <h2 class="share-title">¡Comparte y Gana!</h2>
                 
-                <a href="https://api.whatsapp.com/send?text=¡Mira esta increíble oportunidad para ganar $25 una y otra vez! https://tusitio.com" 
-                   class="share-button whatsapp" target="_blank">
-                    <span class="share-icon">💬</span>
-                    Compartir en WhatsApp
-                </a>
+                <p class="share-cta">Comparte este sitio web y gana $25 una y otra vez con tu código personalizado</p>
                 
-                <a href="sms:?body=¡Descubre cómo ganar $25 repetidamente con este sistema! https://tusitio.com" 
-                   class="share-button messenger" target="_blank">
-                    <span class="share-icon">📱</span>
-                    Enviar por Mensaje
-                </a>
+                <div class="share-buttons">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://jobsaibuilder.vercel.app" 
+                       class="share-button facebook" target="_blank">
+                        <span class="share-icon">📘</span>
+                        Compartir en Facebook
+                    </a>
+                    
+                    <a href="https://api.whatsapp.com/send?text=¡Descubre cómo ganar $25 repetidamente con AI Viral Downline! Mira este sistema revolucionario: https://jobsaibuilder.vercel.app" 
+                       class="share-button whatsapp" target="_blank">
+                        <span class="share-icon">💬</span>
+                        Compartir en WhatsApp
+                    </a>
+                    
+                    <a href="sms:?body=¡Mira esta oportunidad para ganar $25 repetidamente con IA! https://jobsaibuilder.vercel.app" 
+                       class="share-button messenger" target="_blank">
+                        <span class="share-icon">📱</span>
+                        Enviar por Mensaje
+                    </a>
+                </div>
+                
+                <p class="share-note">
+                    * Cada vez que alguien se registre usando tu enlace personalizado, podrías ganar $25. 
+                    ¡Comparte <a href="https://jobsaibuilder.vercel.app" class="website-link" target="_blank">este sitio web</a> con amigos, familiares y contactos para multiplicar tus ingresos!
+                </p>
             </div>
-            
-            <p class="share-note">
-                * Cada vez que alguien se registre usando tu enlace personalizado, podrías ganar $25. 
-                ¡Comparte con amigos, familiares y contactos para multiplicar tus ingresos!
-            </p>
         </section>
 
         <!-- FOOTER (simplificado como solicitaste) -->
@@ -1834,6 +1956,28 @@
                 }, { threshold: 0.5 });
                 
                 countObserver.observe(countElement);
+            }
+            
+            // Animación para botones de compartir
+            const shareButtons = document.querySelectorAll('.share-button');
+            if (shareButtons.length > 0) {
+                const shareObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            shareButtons.forEach((button, index) => {
+                                setTimeout(() => {
+                                    button.style.animation = 'slideIn 0.6s ease-out forwards';
+                                }, index * 200);
+                            });
+                            shareObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.3 });
+                
+                const shareSection = document.querySelector('.share-section');
+                if (shareSection) {
+                    shareObserver.observe(shareSection);
+                }
             }
         });
     </script>
