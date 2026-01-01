@@ -78,6 +78,263 @@
             word-wrap: break-word;
         }
 
+        /* ===== NUEVA SECCIÓN: IMAGINA GENERAR INGRESOS ===== */
+        .imagine-section {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 193, 7, 0.1));
+            border-left: 6px solid #FF6B6B;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .imagine-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(255, 107, 107, 0.1) 0%, transparent 70%),
+                        radial-gradient(circle at 70% 20%, rgba(255, 193, 7, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+        
+        .imagine-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .imagine-title {
+            color: #FFD700;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 10px rgba(255, 215, 0, 0.3); }
+            to { text-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.4); }
+        }
+        
+        .imagine-question {
+            font-size: 1.4rem;
+            color: #FF8E53;
+            margin-bottom: 3rem;
+            font-style: italic;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .images-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .money-image {
+            width: 300px;
+            height: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+            cursor: pointer;
+            border: 3px solid transparent;
+            background: linear-gradient(45deg, #FF6B6B, #FF8E53, #FFD700);
+            background-size: 300% 300%;
+            animation: borderGlow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes borderGlow {
+            0% { 
+                border-color: #FF6B6B;
+                background-position: 0% 50%;
+            }
+            50% { 
+                border-color: #FF8E53;
+                background-position: 100% 50%;
+            }
+            100% { 
+                border-color: #FFD700;
+                background-position: 0% 50%;
+            }
+        }
+        
+        .money-image.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .money-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .money-image:hover img {
+            transform: scale(1.1);
+        }
+        
+        .money-image:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.6);
+        }
+        
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 32, 39, 0.9);
+            color: #FFD700;
+            padding: 1rem;
+            font-weight: bold;
+            transform: translateY(100%);
+            transition: transform 0.5s ease;
+            text-align: center;
+        }
+        
+        .money-image:hover .image-caption {
+            transform: translateY(0);
+        }
+        
+        .imagine-description {
+            color: #b0e0e6;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid #40e0d0;
+        }
+        
+        .imagine-highlight {
+            color: #FFD700;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Animación de conteo */
+        .count-animation {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #FFD700;
+            margin: 1rem 0;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            animation: countPulse 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes countPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* ===== SECCIÓN DE COMPARTIR REDES SOCIALES ===== */
+        .share-section {
+            background: linear-gradient(135deg, rgba(32, 58, 67, 0.9), rgba(44, 83, 100, 0.9));
+            border-left: 6px solid #4CAF50;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .share-title {
+            color: #4CAF50;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+        }
+        
+        .share-cta {
+            font-size: 1.3rem;
+            color: #FFD700;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+        
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+        
+        .share-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            min-width: 200px;
+            box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+            position: relative;
+            top: 0;
+        }
+        
+        .share-button:hover {
+            top: -3px;
+            box-shadow: 0 9px 0 rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+        
+        .share-button:active {
+            top: 0;
+            box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        .share-button.facebook {
+            background: linear-gradient(135deg, #1877F2, #0D5DB6);
+            color: white;
+        }
+        
+        .share-button.whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+        }
+        
+        .share-button.messenger {
+            background: linear-gradient(135deg, #006AFF, #0051CC);
+            color: white;
+        }
+        
+        .share-icon {
+            font-size: 1.5rem;
+        }
+        
+        .share-note {
+            color: #87ceeb;
+            font-size: 0.95rem;
+            margin-top: 1.5rem;
+            font-style: italic;
+        }
+
         /* ===== CONTENEDORES DE VIDEO ===== */
         .video-wrapper {
             position: relative;
@@ -895,6 +1152,39 @@
             .tutorial-icon {
                 font-size: 2rem;
             }
+            
+            /* Responsive para nueva sección */
+            .imagine-title {
+                font-size: 1.6rem;
+            }
+            
+            .imagine-question {
+                font-size: 1.2rem;
+            }
+            
+            .images-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .money-image {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .count-animation {
+                font-size: 2.5rem;
+            }
+            
+            .share-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .share-button {
+                width: 100%;
+                max-width: 300px;
+            }
         }
         
         @media (max-width: 480px) {
@@ -913,6 +1203,15 @@
             .pdf-button {
                 font-size: 1rem;
                 padding: 1rem 1.5rem;
+            }
+            .imagine-title {
+                font-size: 1.4rem;
+            }
+            .imagine-question {
+                font-size: 1.1rem;
+            }
+            .count-animation {
+                font-size: 2rem;
             }
         }
     </style>
@@ -988,7 +1287,7 @@
                 
                 <!-- Video de YouTube EMBED -->
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/Gdy_rvXfcpA?si=Q9UFvtNjgA1Jpwiy"
+                    <iframe src="https://www.youtube.com/embed/Gdy_rvXfcpA?si=5CgSBSRhHh5mkwxk"
                             title="Tutorial Completo AI Viral Downline - Registro y Activación"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
@@ -1125,6 +1424,41 @@
             </div>
         </section>
 
+        <!-- NUEVA SECCIÓN: Imagina generar ingresos de $25 -->
+        <section class="section imagine-section">
+            <div class="imagine-content">
+                <h2 class="imagine-title">¡Imagina generar ingresos de $25 una y otra vez!</h2>
+                
+                <div class="count-animation">$25</div>
+                
+                <p class="imagine-question">¿Y cobrar el mismo día, la primera semana o en el primer mes?</p>
+                
+                <div class="images-container" id="imagesContainer">
+                    <!-- Imágenes con efectos animados -->
+                    <div class="money-image">
+                        <img src="https://i.imgur.com/Ctx7Kds.jpeg" alt="Ingresos repetidos de $25" loading="lazy">
+                        <div class="image-caption">¡Gana $25 repetidamente!</div>
+                    </div>
+                    
+                    <div class="money-image">
+                        <img src="https://i.imgur.com/ZpH1M0f.jpeg" alt="Cobra el mismo día" loading="lazy">
+                        <div class="image-caption">Cobra el mismo día</div>
+                    </div>
+                    
+                    <div class="money-image">
+                        <img src="https://i.imgur.com/0qARLwu.jpeg" alt="Ingresos en la primera semana" loading="lazy">
+                        <div class="image-caption">Primera semana de ingresos</div>
+                    </div>
+                </div>
+                
+                <p class="imagine-description">
+                    Con <span class="imagine-highlight">AI Viral Downline</span>, cada referencia exitosa puede generarte <span class="imagine-highlight">$25 de ingreso inmediato</span>, y lo mejor es que este proceso se puede repetir una y otra vez. 
+                    <br><br>
+                    Imagina despertar cada mañana con nuevos ingresos en tu cuenta, generados automáticamente mientras duermes. ¡Esa es la magia del sistema de referidos automatizado!
+                </p>
+            </div>
+        </section>
+
         <!-- Sección de Llamado a la Acción -->
         <section class="cta-section">
             <h2 class="cta-title">¡Activa Tu Potencial de Ingresos!</h2>
@@ -1167,6 +1501,38 @@
             
             <p class="risk-free">Conecta con nuestra comunidad para más información y soporte</p>
             <p><small>Consulta en nuestro grupo de Telegram para detalles adicionales</small></p>
+        </section>
+
+        <!-- NUEVA SECCIÓN: Compartir en Redes Sociales -->
+        <section class="section share-section">
+            <h2 class="share-title">¡Comparte y Gana!</h2>
+            
+            <p class="share-cta">Comparte este sitio web y gana $25 una y otra vez con tu código personalizado</p>
+            
+            <div class="share-buttons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://tusitio.com" 
+                   class="share-button facebook" target="_blank">
+                    <span class="share-icon">📘</span>
+                    Compartir en Facebook
+                </a>
+                
+                <a href="https://api.whatsapp.com/send?text=¡Mira esta increíble oportunidad para ganar $25 una y otra vez! https://tusitio.com" 
+                   class="share-button whatsapp" target="_blank">
+                    <span class="share-icon">💬</span>
+                    Compartir en WhatsApp
+                </a>
+                
+                <a href="sms:?body=¡Descubre cómo ganar $25 repetidamente con este sistema! https://tusitio.com" 
+                   class="share-button messenger" target="_blank">
+                    <span class="share-icon">📱</span>
+                    Enviar por Mensaje
+                </a>
+            </div>
+            
+            <p class="share-note">
+                * Cada vez que alguien se registre usando tu enlace personalizado, podrías ganar $25. 
+                ¡Comparte con amigos, familiares y contactos para multiplicar tus ingresos!
+            </p>
         </section>
 
         <!-- FOOTER -->
@@ -1437,6 +1803,67 @@
                 }
             }, 10000);
         }
+
+        // NUEVO CÓDIGO PARA ANIMACIÓN DE IMÁGENES
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.money-image');
+            const imagesContainer = document.getElementById('imagesContainer');
+            
+            // Animación de entrada para las imágenes
+            function animateImages() {
+                images.forEach((image, index) => {
+                    // Retraso escalonado para cada imagen
+                    setTimeout(() => {
+                        image.classList.add('visible');
+                    }, index * 300);
+                });
+            }
+            
+            // Observador de intersección para animar al hacer scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateImages();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+            
+            // Observar el contenedor de imágenes
+            if (imagesContainer) {
+                observer.observe(imagesContainer);
+            }
+            
+            // Efecto de conteo animado
+            const countElement = document.querySelector('.count-animation');
+            if (countElement) {
+                let count = 0;
+                const target = 25;
+                const duration = 2000; // 2 segundos
+                const increment = target / (duration / 16); // 60fps
+                
+                const updateCount = () => {
+                    if (count < target) {
+                        count += increment;
+                        if (count > target) count = target;
+                        countElement.textContent = `$${Math.round(count)}`;
+                        requestAnimationFrame(updateCount);
+                    }
+                };
+                
+                // Iniciar animación cuando la sección sea visible
+                const countObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCount();
+                            countObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                countObserver.observe(countElement);
+            }
+        });
     </script>
 </body>
 </html>
