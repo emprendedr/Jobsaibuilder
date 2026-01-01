@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jobs AI Builders - Tu Sistema de Automatización con IA</title>
     <style>
-        /* ===== ESTILOS GENERALES - SOLO PREVENIR SCROLL HORIZONTAL ===== */
+        /* ===== ESTILOS GENERALES ===== */
         * {
             margin: 0;
             padding: 0;
@@ -31,7 +31,7 @@
             width: 100%;
         }
 
-        /* ===== CABECERA OPTIMIZADA PARA MÓVILES ===== */
+        /* ===== CABECERA ===== */
         header {
             text-align: center;
             padding: 2.5rem 1rem;
@@ -98,7 +98,7 @@
             border: none;
         }
 
-        /* ===== LISTA DE FUNCIONES DE EMILY ===== */
+        /* ===== LISTA DE FUNCIONES ===== */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -120,170 +120,7 @@
             font-size: 1.2rem;
         }
 
-        /* ===== SECCIÓN DE TUTORIAL CON THUMBNAIL ATRACTIVO ===== */
-        .tutorial-section {
-            background: linear-gradient(135deg, rgba(15, 32, 39, 0.9), rgba(44, 83, 100, 0.9));
-            border-left: 6px solid #FF4081;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-        }
-        
-        .tutorial-section::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(255, 64, 129, 0.15) 0%, transparent 70%);
-            z-index: 0;
-        }
-        
-        .tutorial-content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .tutorial-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 1.5rem;
-        }
-        
-        .tutorial-icon {
-            font-size: 2.5rem;
-            animation: pulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-        
-        .tutorial-card {
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 15px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border: 2px solid rgba(255, 64, 129, 0.3);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .tutorial-card:hover {
-            transform: translateY(-5px);
-            border-color: #FF4081;
-            box-shadow: 0 10px 25px rgba(255, 64, 129, 0.2);
-        }
-        
-        .tutorial-thumbnail {
-            position: relative;
-            width: 100%;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 1.5rem;
-            cursor: pointer;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-        }
-        
-        .tutorial-thumbnail img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-        
-        .tutorial-thumbnail:hover img {
-            transform: scale(1.05);
-        }
-        
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 70px;
-            height: 70px;
-            background: rgba(255, 64, 129, 0.9);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 0 10px rgba(255, 64, 129, 0.3);
-        }
-        
-        .play-button:hover {
-            background: #FF4081;
-            transform: translate(-50%, -50%) scale(1.1);
-            box-shadow: 0 0 0 15px rgba(255, 64, 129, 0.3);
-        }
-        
-        .play-button svg {
-            fill: white;
-            width: 30px;
-            height: 30px;
-            margin-left: 5px;
-        }
-        
-        .tutorial-info {
-            text-align: center;
-            padding: 0 1rem;
-        }
-        
-        .tutorial-title {
-            color: #FFD700;
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-        }
-        
-        .tutorial-description {
-            color: #b0e0e6;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-        
-        .tutorial-cta {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: linear-gradient(90deg, #FF4081, #FF5252);
-            color: white;
-            font-weight: 700;
-            font-size: 1.2rem;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            margin: 1rem auto;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 6px 0 #C2185B, 0 10px 25px rgba(255, 64, 129, 0.4);
-            transition: all 0.3s ease;
-            position: relative;
-            top: 0;
-        }
-        
-        .tutorial-cta:hover {
-            top: -3px;
-            box-shadow: 0 8px 0 #C2185B, 0 15px 30px rgba(255, 64, 129, 0.6);
-            background: linear-gradient(90deg, #FF5252, #FF4081);
-            transform: scale(1.05);
-        }
-        
-        .tutorial-cta svg {
-            fill: white;
-            width: 20px;
-            height: 20px;
-        }
-
-        /* ===== SECCIÓN DE PDF ===== */
+        /* ===== SECCIÓN DE GUÍA EN PDF ===== */
         .pdf-section {
             background: linear-gradient(135deg, rgba(15, 32, 39, 0.9), rgba(32, 58, 67, 0.9));
             border-left: 6px solid #FF6B6B;
@@ -428,7 +265,106 @@
             height: 24px;
         }
 
-        /* ===== SECCIÓN DE LLAMADO A LA ACCIÓN (CTA) ===== */
+        /* ===== SECCIÓN DE INFORMACIÓN FINAL ===== */
+        .final-info-section {
+            background: linear-gradient(135deg, rgba(44, 83, 100, 0.9), rgba(32, 58, 67, 0.9));
+            border-left: 6px solid #40e0d0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .final-info-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(64, 224, 208, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+        
+        .final-info-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .info-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+        
+        .info-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 2px solid rgba(64, 224, 208, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .info-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: #40e0d0;
+            transform: translateY(-3px);
+        }
+        
+        .info-title {
+            color: #7fffd4;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .info-description {
+            color: #b0e0e6;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .next-step-container {
+            background: rgba(15, 32, 39, 0.6);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            border-left: 4px solid #FFD700;
+        }
+        
+        .next-step-title {
+            color: #FFD700;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .next-step-list {
+            list-style: none;
+            padding-left: 0;
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .next-step-list li {
+            margin-bottom: 1.2rem;
+            padding-left: 2.5rem;
+            position: relative;
+            color: #e0ffff;
+            font-size: 1.1rem;
+        }
+        
+        .next-step-list li:before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #40e0d0;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        /* ===== SECCIÓN DE LLAMADO A LA ACCIÓN ===== */
         .cta-section {
             text-align: center;
             background: linear-gradient(to right, #1d4350, #2c5364);
@@ -454,7 +390,7 @@
             word-wrap: break-word;
         }
 
-        /* ===== BOTONES PROFESIONALES ===== */
+        /* ===== BOTONES ===== */
         .telegram-button {
             display: inline-block;
             background: linear-gradient(90deg, #0088cc, #006699);
@@ -505,7 +441,7 @@
             font-size: 1.1rem;
         }
 
-        /* ===== SECCIÓN: TU MATRIZ 3x8 ===== */
+        /* ===== SECCIÓN: MATRIZ 3x8 ===== */
         .income-section {
             background: rgba(15, 32, 39, 0.85);
             border-left: 6px solid #FFA500;
@@ -587,7 +523,7 @@
             font-weight: bold;
         }
 
-        /* ===== ESTILOS PARA EL FOOTER ACTUALIZADO ===== */
+        /* ===== FOOTER ===== */
         .footer-content {
             max-width: 1000px;
             margin: 0 auto;
@@ -636,7 +572,7 @@
             margin-bottom: 0.5rem;
         }
 
-        /* ===== CHATBOT ESTILOS ===== */
+        /* ===== CHATBOT ===== */
         .chatbot-icon {
             position: fixed;
             bottom: 20px;
@@ -836,7 +772,7 @@
             box-shadow: 0 5px 15px rgba(0, 201, 255, 0.3);
         }
 
-        /* ===== DISEÑO RESPONSIVE MEJORADO ===== */
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .container { 
                 padding: 1rem 1.2rem;
@@ -870,7 +806,7 @@
                 font-size: 1.1rem;
                 padding: 0 5px;
             }
-            .register-button, .telegram-button, .pdf-button, .tutorial-cta {
+            .register-button, .telegram-button, .pdf-button {
                 padding: 1rem 2rem;
                 font-size: 1.1rem;
                 width: 100%;
@@ -911,15 +847,9 @@
             .pdf-preview {
                 padding: 1.5rem;
             }
-            .tutorial-icon {
-                font-size: 2rem;
-            }
-            .tutorial-card {
-                padding: 1rem;
-            }
-            .play-button {
-                width: 60px;
-                height: 60px;
+            .next-step-list li {
+                padding-left: 2rem;
+                font-size: 1rem;
             }
         }
         
@@ -936,7 +866,7 @@
             .cta-section {
                 padding: 2rem 1rem;
             }
-            .pdf-button, .tutorial-cta {
+            .pdf-button {
                 font-size: 1rem;
                 padding: 1rem 1.5rem;
             }
@@ -945,7 +875,7 @@
 </head>
 <body>
     <div class="container">
-        <!-- Cabecera optimizada para móviles -->
+        <!-- Cabecera -->
         <header>
             <h1>Jobs AI Builders</h1>
             <p class="tagline">Deja que la IA Construya Tu Línea Descendente Mientras Tú Relajas</p>
@@ -954,7 +884,7 @@
 
         <!-- Primer video (Intro de Emily) -->
         <section class="section">
-            <h2 class="section-title">Mira este corto video</h2>
+            <h2 class="section-title">Presentación Inicial</h2>
             <div class="video-wrapper">
                 <iframe src="https://www.youtube.com/embed/IBhOkKNunkc"
                         title="Presentación de Emily - IA para Negocios"
@@ -987,68 +917,6 @@
             </div>
         </section>
 
-        <!-- NUEVA SECCIÓN: TUTORIAL PASO A PASO -->
-        <section class="section tutorial-section">
-            <div class="tutorial-header">
-                <div class="tutorial-icon">🎬</div>
-                <h2 class="section-title" style="margin: 0;">¿Listo para dar el siguiente paso?</h2>
-            </div>
-            
-            <div class="tutorial-content">
-                <p class="cta-subtitle" style="margin-bottom: 2rem;">
-                    Mira este tutorial y pídele el link de registro a quien te presentó esta gran oportunidad
-                </p>
-                
-                <div class="tutorial-card">
-                    <div class="tutorial-thumbnail" id="videoThumbnail">
-                        <!-- Thumbnail del video -->
-                        <img src="https://img.youtube.com/vi/Gdy_rvXfcpA/maxresdefault.jpg" alt="Tutorial AI Viral Downline">
-                        <div class="play-button" id="playButton">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    
-                    <div class="tutorial-info">
-                        <h3 class="tutorial-title">Tutorial Paso a Paso</h3>
-                        <p class="tutorial-description">
-                            Aprende todo lo necesario para comenzar tu viaje con AI Viral Downline. Este tutorial te guiará a través del proceso completo de registro y configuración inicial.
-                        </p>
-                        
-                        <div class="highlight-box" style="margin: 1.5rem 0;">
-                            <h3>📋 Lo que aprenderás:</h3>
-                            <ul style="list-style: none; padding-left: 0; text-align: left;">
-                                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative;">
-                                    <span style="position: absolute; left: 0; color: #40e0d0;">✓</span>
-                                    Cómo funciona el sistema de automatización
-                                </li>
-                                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative;">
-                                    <span style="position: absolute; left: 0; color: #40e0d0;">✓</span>
-                                    Cómo activar tu cuenta correctamente
-                                </li>
-                                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative;">
-                                    <span style="position: absolute; left: 0; color: #40e0d0;">✓</span>
-                                    Primeros pasos para construir tu línea descendente
-                                </li>
-                                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative;">
-                                    <span style="position: absolute; left: 0; color: #40e0d0;">✓</span>
-                                    Consejos para maximizar tus ingresos desde el inicio
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <button class="tutorial-cta" id="watchTutorial">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                                <path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-                            </svg>
-                            Ver Tutorial Completo
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Segundo video (Presentación completa) -->
         <section class="section">
             <h2 class="section-title">Presentación Completa del Sistema</h2>
@@ -1061,7 +929,41 @@
             </div>
         </section>
 
-        <!-- SECCIÓN: PDF DE CANVA -->
+        <!-- Nueva sección: Información importante después del video 2 -->
+        <section class="section final-info-section">
+            <div class="final-info-content">
+                <div class="info-icon">💡</div>
+                <h2 class="section-title">Información Importante para Continuar</h2>
+                
+                <div class="info-card">
+                    <h3 class="info-title">¿Listo para dar el siguiente paso?</h3>
+                    <p class="info-description">
+                        Ahora que has visto la presentación completa del sistema, es momento de tomar acción. 
+                        Tu siguiente paso es crucial para comenzar tu viaje hacia los ingresos residuales.
+                    </p>
+                    
+                    <div class="next-step-container">
+                        <h3 class="next-step-title">Procedimiento a seguir:</h3>
+                        <ul class="next-step-list">
+                            <li><strong>Paso 1:</strong> Mira el tutorial completo del sistema para entender el proceso de registro</li>
+                            <li><strong>Paso 2:</strong> Contacta a la persona que te presentó esta oportunidad</li>
+                            <li><strong>Paso 3:</strong> Pídele el enlace de registro personalizado</li>
+                            <li><strong>Paso 4:</strong> Sigue las instrucciones para activar tu cuenta</li>
+                            <li><strong>Paso 5:</strong> Comienza a construir tu línea descendente con el apoyo de Emily</li>
+                        </ul>
+                    </div>
+                    
+                    <p class="info-description" style="margin-top: 2rem;">
+                        <strong>Importante:</strong> No intentes registrarte directamente en ningún sitio web. 
+                        El proceso de registro debe realizarse a través del enlace personalizado que te proporcionará 
+                        la persona que te compartió esta información para garantizar que quedes correctamente ubicado 
+                        en la matriz y recibas el soporte adecuado.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Guía en PDF -->
         <section class="section pdf-section">
             <h2 class="section-title">📘 Guía Completa en PDF</h2>
             
@@ -1087,7 +989,7 @@
                             <li>Explicación detallada del sistema AI Viral Downline</li>
                             <li>Desglose completo de la matriz 3x8</li>
                             <li>Estrategias para maximizar tus ingresos</li>
-                            <li>Pasos para comenzar tu prueba gratuita</li>
+                            <li>Pasos para comenzar tu viaje</li>
                             <li>Preguntas frecuentes y respuestas</li>
                             <li>Contactos de soporte y comunidad</li>
                         </ul>
@@ -1110,7 +1012,7 @@
 
         <!-- Sección: Tu Matriz 3x8 - Ingresos Residuales -->
         <section class="section income-section">
-            <h2 class="section-title">Tu Matriz 3x8 — Ingresos Residuales a partir del Mes 2</h2>
+            <h2 class="section-title">Tu Matriz 3x8 — Ingresos Residuales</h2>
 
             <div class="income-intro">
                 <p>Como miembro <strong>GRATUITO</strong>, ya ocupas una posición en la matriz. Una vez que te actualices, desbloqueas toda la estructura de ingresos, <strong>incluyendo la capacidad de ganar durante tu prueba de 7 días</strong>.</p>
@@ -1119,8 +1021,8 @@
             <div class="payouts">
                 <h3>💰 Pagos Mensuales de la Matriz</h3>
                 <ul class="payout-list">
-                    <li><strong>Nivel 1</strong> — $10 por miembro (3 miembros = $30/mes - ¡No importa cómo lleguen a ti!)</li>
-                    <li><strong>Niveles 2–7</strong> — $2 por miembro mensual (Ganas Comisiones de Matriz del Nivel 1 al 7 con <strong>cero</strong> referidos personales)</li>
+                    <li><strong>Nivel 1</strong> — $10 por miembro (3 miembros = $30/mes)</li>
+                    <li><strong>Niveles 2–7</strong> — $2 por miembro mensual (Ganas Comisiones de Matriz del Nivel 1 al 7 sin referidos personales)</li>
                     <li><strong>Nivel 8</strong> — $3 por miembro (Requiere solo 3 referidos personales)</li>
                 </ul>
                 <div class="highlight-box">
@@ -1181,36 +1083,32 @@
             </div>
         </section>
 
-        <!-- Sección de Llamado a la Acción (CTA) -->
+        <!-- Sección de Llamado a la Acción -->
         <section class="cta-section">
-            <h2 class="cta-title">¡Desbloquea a Emily y Tu Potencial de Ingresos!</h2>
-            <p class="cta-subtitle">Da el primer paso para automatizar tu negocio y activar tu potencial de ingresos residuales. La información completa y el registro están disponibles a través de nuestros canales oficiales.</p>
+            <h2 class="cta-title">¡Activa Tu Potencial de Ingresos!</h2>
+            <p class="cta-subtitle">Da el primer paso para automatizar tu negocio y activar tu potencial de ingresos residuales. Sigue el procedimiento indicado para comenzar correctamente.</p>
 
-            <!-- Botón de Telegram -->
             <a href="https://t.me/+EnM9LTD6JlgzMjcx" 
                class="telegram-button" target="_blank">
                 📱 Únete a nuestro Grupo de Telegram
             </a>
             
-            <p class="risk-free">¡Conecta con nuestra comunidad para más información!</p>
-            <p><small>Consulta en nuestro grupo de Telegram para detalles sobre el proceso de registro.</small></p>
+            <p class="risk-free">Conecta con nuestra comunidad para más información y soporte</p>
+            <p><small>Consulta en nuestro grupo de Telegram para detalles adicionales</small></p>
         </section>
 
-        <!-- FOOTER ACTUALIZADO -->
+        <!-- FOOTER -->
         <footer>
             <div class="footer-content">
-                <!-- Información de contacto general -->
                 <div class="footer-credit">
-                    <p>💡 <strong>¿Listo para dar el siguiente paso?</strong></p>
-                    <p>Mira el tutorial y pídele el link de registro a quien te presentó esta gran oportunidad.</p>
-                    <p>Para asistencia personalizada, regresa con la persona que te compartió este sitio web.</p>
-                    <p>También puedes unirte a nuestra comunidad:</p>
+                    <p>💡 <strong>¿Listo para comenzar?</strong></p>
+                    <p>Sigue los pasos indicados: mira el tutorial, contacta a tu referente y pídele el enlace de registro personalizado.</p>
+                    <p>Recuerda que el registro debe realizarse a través del enlace proporcionado por la persona que te presentó esta oportunidad.</p>
                     <p class="highlight-contact">
-                        <a href="https://t.me/+EnM9LTD6JlgzMjcx" target="_blank">📱 Únete al Grupo de Telegram</a>
+                        <a href="https://t.me/+EnM9LTD6JlgzMjcx" target="_blank">📱 Únete al Grupo de Telegram para Soporte</a>
                     </p>
                 </div>
 
-                <!-- Línea de derechos de autor -->
                 <div class="footer-bottom">
                     <p>Todos los derechos reservados © 2025 Jobs AI Builders.</p>
                     <p>Este sitio opera de manera independiente.</p>
@@ -1262,19 +1160,6 @@
     </div>
 
     <script>
-        // Funcionalidad del tutorial
-        const videoThumbnail = document.getElementById('videoThumbnail');
-        const playButton = document.getElementById('playButton');
-        const watchTutorial = document.getElementById('watchTutorial');
-        
-        function openTutorialVideo() {
-            window.open('https://youtu.be/Gdy_rvXfcpA?si=nF4LkLUT71BP6Vh9', '_blank');
-        }
-        
-        videoThumbnail.addEventListener('click', openTutorialVideo);
-        playButton.addEventListener('click', openTutorialVideo);
-        watchTutorial.addEventListener('click', openTutorialVideo);
-
         // Chatbot Variables
         const chatbotIcon = document.getElementById('chatbotIcon');
         const chatbotContainer = document.getElementById('chatbotContainer');
@@ -1285,39 +1170,37 @@
         const quickReplyButtons = document.querySelectorAll('.quick-reply');
         const ctaButtons = document.getElementById('ctaButtons');
 
-        // Base de conocimiento del chatbot ACTUALIZADA
+        // Base de conocimiento actualizada del chatbot
         const knowledgeBase = {
-            "hola": "¡Hola! 👋 Soy **Emily**, tu asistente de IA para AI Viral Downline. Puedo explicarte cómo funciona el sistema, los costos y cómo automatizar tu negocio. ¿En qué puedo ayudarte hoy?\n\n**💡 Recuerda:** Para información sobre el registro, mira el tutorial y pídele el link de registro a quien te presentó esta oportunidad.",
+            "hola": "¡Hola! 👋 Soy **Emily**, tu asistente de IA para AI Viral Downline. Puedo explicarte cómo funciona el sistema y guiarte en el proceso. ¿En qué puedo ayudarte hoy?\n\n**💡 Importante:** Para comenzar, debes contactar a la persona que te presentó esta oportunidad y pedirle el enlace de registro personalizado.",
             
-            "cuánto cuesta": "La suscripción es de **$28 al mes**. 🎯 Esto incluye acceso completo al sistema de automatización, soporte de IA 24/7 y todas las herramientas para construir tu línea descendente.\n\n**Para comenzar:**\n1. **Mira el tutorial** disponible en esta página\n2. **Pídele el link de registro** a quien te presentó esta oportunidad\n3. Sigue los pasos del tutorial para activar tu cuenta",
+            "cuánto cuesta": "La suscripción es de **$28 al mes**. 🎯 Esto incluye acceso completo al sistema de automatización, soporte de IA 24/7 y todas las herramientas para construir tu línea descendente.\n\n**Procedimiento:**\n1. Contacta a quien te presentó esta oportunidad\n2. Pídele el enlace de registro personalizado\n3. Sigue el proceso de activación",
             
-            "28": "✅ Correcto, son **$28 al mes**. Para comenzar:\n1. **Mira el tutorial paso a paso** en esta página\n2. **Contacta a la persona que te compartió este enlace** para obtener el link de registro\n3. Sigue las instrucciones del tutorial para activar tu cuenta",
+            "28": "✅ Correcto, son **$28 al mes**. Para comenzar:\n1. **Contacta a la persona que te compartió este enlace**\n2. **Pídele el enlace de registro personalizado**\n3. Sigue las instrucciones para activar tu cuenta\n\n⚠️ **No intentes registrarte directamente** - debe ser a través del enlace personalizado.",
             
-            "dónde está": "📍 **La empresa está ubicada en:**\nAI Viral Downline LLC\n7261 Tamarack RD\nPlymouth IN 46563\n📧 Email: admin@aiviraldownline.com\n\n**Para registro y soporte:**\n1. Mira el tutorial en esta página\n2. Contacta a quien te presentó esta oportunidad para el link de registro",
+            "dónde está": "📍 **La empresa está ubicada en:**\nAI Viral Downline LLC\n7261 Tamarack RD\nPlymouth IN 46563\n📧 Email: admin@aiviraldownline.com\n\n**Para registro:** Contacta a quien te presentó esta oportunidad para el enlace personalizado.",
             
-            "cómo empiezo": "🚀 **Para empezar es muy fácil:**\n1. **Mira el tutorial completo** en esta página\n2. **Pídele el link de registro** a la persona que te presentó esta gran oportunidad\n3. Sigue los pasos del tutorial paso a paso\n4. Activa tu cuenta y comienza tu viaje\n\n**💡 Consejo:** El tutorial te guiará a través de todo el proceso.",
+            "cómo empiezo": "🚀 **Para comenzar correctamente:**\n1. **Contacta a la persona que te presentó esta oportunidad**\n2. **Pídele el enlace de registro personalizado**\n3. Sigue el proceso de activación paso a paso\n4. Comienza a construir tu línea descendente\n\n**💡 Es crucial** usar el enlace personalizado para quedar correctamente ubicado en la matriz.",
             
-            "registro": "🎯 **Para obtener el registro:**\n1. **Mira el tutorial** disponible en esta página\n2. **Contacta a quien te presentó esta oportunidad** para obtener el link de registro\n3. Sigue las instrucciones del tutorial paso a paso\n4. Activa tu cuenta y comienza a construir tu línea descendente",
+            "registro": "🎯 **Proceso de registro:**\n1. **Contacta a quien te presentó esta oportunidad**\n2. **Pídele el enlace de registro personalizado**\n3. Sigue las instrucciones para activar tu cuenta\n\n⚠️ **Importante:** No intentes registrarte directamente. Usa siempre el enlace personalizado que te proporcione tu referente.",
             
-            "qué es": "🤖 **AI Viral Downline** es una plataforma de automatización con inteligencia artificial diseñada para ayudar a personas a promocionar oportunidades digitales, atraer prospectos y generar ingresos en línea, **incluso sin experiencia previa**.\n\n**Para más información:** Mira el tutorial en esta página y contacta a quien te presentó esta oportunidad.",
+            "qué es": "🤖 **AI Viral Downline** es una plataforma de automatización con inteligencia artificial diseñada para ayudar a personas a promocionar oportunidades digitales, atraer prospectos y generar ingresos residuales en línea.\n\n**Para comenzar:** Contacta a quien te presentó esta oportunidad para el registro.",
             
-            "tutorial": "🎬 **Tutorial disponible:**\nEn esta página encontrarás un **tutorial completo paso a paso** que explica:\n• Cómo funciona el sistema\n• Cómo activar tu cuenta\n• Primeros pasos para construir tu línea descendente\n• Consejos para maximizar tus ingresos\n\n**Para el link de registro:** Contacta a quien te presentó esta oportunidad.",
+            "tutorial": "📽️ **Información sobre tutoriales:**\nLa persona que te presentó esta oportunidad puede proporcionarte tutoriales específicos y guías personalizadas.\n\n**Procedimiento:**\n1. Contacta a tu referente\n2. Pídele el enlace de registro personalizado\n3. Solicita los tutoriales y guías correspondientes",
             
-            "automatizar": "🔄 **Para automatizar tu negocio:**\n1. **Mira el tutorial** en esta página para entender el sistema\n2. **Pídele el link de registro** a quien te presentó esta oportunidad\n3. El sistema AI Viral Downline se encarga de la mayoría de las tareas\n4. **Emily (yo)**: Atiendo preguntas y explico el sistema 24/7\n5. **Ingresos Pasivos**: Generas comisiones de toda tu red automáticamente",
+            "automatizar": "🔄 **Sistema de automatización:**\nAI Viral Downline se encarga de:\n• Atender prospectos 24/7\n• Explicar el sistema automáticamente\n• Guiar el proceso de registro\n• Generar ingresos residuales\n\n**Para activar:** Contacta a tu referente para el enlace de registro.",
             
-            "matriz": "📊 **Matriz 3x8:**\n• Nivel 1: 3 spots = $30/mes (se paga tu membresía)\n• Niveles 2-7: $2 por miembro = $6,552/mes (sin referir)\n• Nivel 8: $3 por miembro = $19,683/mes (con 3 referidos)\n• **Total posible: $26,265/mes**\n\n**Para más detalles:** Mira el tutorial en esta página.",
+            "matriz": "📊 **Matriz 3x8:**\n• Nivel 1: 3 spots = $30/mes (se paga tu membresía)\n• Niveles 2-7: $2 por miembro = $6,552/mes (sin referir)\n• Nivel 8: $3 por miembro = $19,683/mes (con 3 referidos)\n• **Total posible: $26,265/mes**\n\n**Para comenzar:** Contacta a tu referente para el registro.",
             
-            "ganar": "💰 **Puedes ganar a través de:**\n• $25 por cada referencia directa (Bono Rápido)\n• Comisiones de matriz 3x8 ($6,582/mes niveles 1-7)\n• Hasta $26,265/mes con matriz completa\n• Spillover automático (personas colocadas en tu equipo sin referirlas)\n\n**💡 Para empezar:** Mira el tutorial y contacta a quien te presentó esta oportunidad.",
+            "ganar": "💰 **Potencial de ingresos:**\n• Comisiones de matriz 3x8 ($6,582/mes niveles 1-7)\n• Hasta $26,265/mes con matriz completa\n• Spillover automático (ingresos pasivos)\n\n**💡 Para activar:** Contacta a quien te presentó esta oportunidad.",
             
-            "spillover": "🔄 **Spillover (Derrame):** Es cuando el sistema coloca personas automáticamente debajo de ti en la matriz, **incluso si no las referiste personalmente.** Esto significa ingresos pasivos sin esfuerzo adicional.",
+            "contacto": "📞 **Para información y registro:**\n1. **Contacta a la persona que te presentó esta oportunidad**\n2. **Pídele el enlace de registro personalizado**\n3. **Alternativa:** Únete a nuestro grupo de Telegram\n\n💡 **Esencial:** Usa el enlace personalizado para registro correcto.",
             
-            "contacto": "📞 **Para información personalizada:**\n1. **Mira el tutorial completo** en esta página\n2. **Pídele el link de registro** a quien te presentó esta oportunidad\n3. **Alternativa:** Únete a nuestro grupo de Telegram para comunidad y soporte\n\n💡 **Recomendación:** El tutorial te guiará a través de todo el proceso.",
+            "gracias": "¡De nada! 😊 Estoy aquí para ayudarte. **Recuerda:** Para comenzar, contacta a quien te presentó esta oportunidad y pídele el enlace de registro personalizado.",
             
-            "gracias": "¡De nada! 😊 Estoy aquí para ayudarte en cualquier momento. **Recuerda:** Para comenzar tu viaje, mira el tutorial y contacta a quien te presentó esta gran oportunidad para el link de registro.",
+            "adiós": "¡Hasta luego! 👋 Recuerda contactar a tu referente para el enlace de registro personalizado.",
             
-            "adiós": "¡Hasta luego! 👋 Recuerda que puedes volver a hablar conmigo cuando quieras. **Para dar el primer paso:** Mira el tutorial y pide el link de registro a quien te presentó esta oportunidad.",
-            
-            "default": "🤔 ¿Podrías reformular tu pregunta? Te puedo ayudar con:\n• Información sobre costos ($28/mes)\n• Cómo empezar (mira el tutorial)\n• Qué es AI Viral Downline\n• Explicación de la matriz 3x8\n\n**💡 Para comenzar:** Mira el tutorial en esta página y contacta a quien te presentó esta oportunidad para el registro."
+            "default": "🤔 ¿Podrías reformular tu pregunta? Te puedo ayudar con:\n• Información sobre el sistema\n• Procedimiento para comenzar\n• Potencial de ingresos\n• Contacto para registro\n\n**💡 Para comenzar:** Contacta a la persona que te presentó esta oportunidad."
         };
 
         // Estado inicial
@@ -1330,7 +1213,7 @@
             
             if (!initialMessageShown) {
                 setTimeout(() => {
-                    addBotMessage("¡Hola! 👋 Soy **Emily**, tu asistente de IA para AI Viral Downline. Puedo responder todas tus preguntas sobre costos, automatización y el sistema.\n\n**💡 Importante:** Para comenzar tu viaje:\n1. **Mira el tutorial paso a paso** disponible en esta página\n2. **Pídele el link de registro** a quien te presentó esta gran oportunidad\n\n¿En qué puedo ayudarte hoy?");
+                    addBotMessage("¡Hola! 👋 Soy **Emily**, tu asistente de IA para AI Viral Downline.\n\n**💡 Información importante:**\nPara comenzar tu viaje correctamente:\n1. **Contacta a la persona que te presentó esta oportunidad**\n2. **Pídele el enlace de registro personalizado**\n3. Sigue el proceso de activación\n\n⚠️ **No intentes registrarte directamente** - usa siempre el enlace personalizado.\n\n¿En qué puedo ayudarte hoy?");
                     initialMessageShown = true;
                 }, 300);
             }
@@ -1391,8 +1274,6 @@
                 response = knowledgeBase["matriz"];
             } else if (lowerMessage.includes('ganar') || lowerMessage.includes('dinero') || lowerMessage.includes('ganancias')) {
                 response = knowledgeBase["ganar"];
-            } else if (lowerMessage.includes('spillover') || lowerMessage.includes('derrame')) {
-                response = knowledgeBase["spillover"];
             } else if (lowerMessage.includes('contacto') || lowerMessage.includes('email') || lowerMessage.includes('teléfono')) {
                 response = knowledgeBase["contacto"];
             } else if (lowerMessage.includes('gracias') || lowerMessage.includes('thank you')) {
@@ -1406,7 +1287,7 @@
                 addBotMessage(response);
                 
                 // Mostrar botones CTA si es relevante
-                if (lowerMessage.includes('registro') || lowerMessage.includes('cómo empiezo') || lowerMessage.includes('comenzar') || lowerMessage.includes('tutorial')) {
+                if (lowerMessage.includes('registro') || lowerMessage.includes('cómo empiezo') || lowerMessage.includes('comenzar')) {
                     setTimeout(() => {
                         ctaButtons.style.display = 'flex';
                     }, 500);
