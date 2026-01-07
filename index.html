@@ -2218,17 +2218,14 @@
                 const phone = document.getElementById('phone').value;
                 const message = document.getElementById('message').value;
                 
-                // Crear el mensaje para WhatsApp o Telegram
-                const formData = `Nuevo contacto:\n\nNombre: ${name}\nEmail: ${email}\nTeléfono: ${phone}\nMensaje: ${message || 'N/A'}`;
-                
                 // Mostrar mensaje de confirmación
                 alert('¡Gracias por tu interés! Tu información ha sido recibida. Nos pondremos en contacto contigo pronto.');
                 
                 // Limpiar el formulario
                 contactForm.reset();
                 
-                // Opcional: redirigir a Telegram o guardar en una base de datos
-                // window.location.href = 'https://t.me/+EnM9LTD6JlgzMjcx';
+                // Opcional: Integrar con backend o sistema de email
+                // Para integración futura, los datos están disponibles en: name, email, phone, message
             });
         }
     </script>
