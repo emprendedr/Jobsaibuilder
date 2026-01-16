@@ -128,6 +128,127 @@
             font-weight: 600;
         }
 
+        /* ===== NUEVA SECCIÓN: INFORMACIÓN DEL SISTEMA ===== */
+        .system-info-section {
+            background: linear-gradient(135deg, rgba(32, 58, 67, 0.95), rgba(44, 83, 100, 0.95));
+            border-left: 6px solid #FFD700;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .system-info-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+        
+        .system-info-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .system-intro {
+            font-size: 1.3rem;
+            color: #40e0d0;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+        
+        .bonus-highlight {
+            font-size: 1.5rem;
+            color: #FFD700;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 12px;
+            border: 2px solid #FFD700;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 215, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+        }
+        
+        .system-points {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .point-item {
+            margin-bottom: 1.5rem;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid #40e0d0;
+            transition: all 0.3s ease;
+        }
+        
+        .point-item:hover {
+            transform: translateX(10px);
+            background: rgba(64, 224, 208, 0.1);
+        }
+        
+        .point-number {
+            display: inline-block;
+            background: #FFD700;
+            color: #0f2027;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
+            font-weight: bold;
+            margin-right: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .point-title {
+            display: inline-block;
+            color: #FFD700;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .point-description {
+            color: #b0e0e6;
+            line-height: 1.6;
+            margin-left: 46px;
+        }
+        
+        .system-conclusion {
+            margin-top: 2.5rem;
+            padding: 1.5rem;
+            background: rgba(64, 224, 208, 0.1);
+            border-radius: 12px;
+            border-top: 2px solid #40e0d0;
+            border-bottom: 2px solid #40e0d0;
+        }
+        
+        .conclusion-text {
+            font-size: 1.2rem;
+            color: #98fb98;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .final-cta {
+            font-size: 1.3rem;
+            color: #FFD700;
+            font-weight: bold;
+            margin-top: 1.5rem;
+        }
+
         /* ===== NUEVA SECCIÓN: IMAGINA GENERAR INGRESOS ===== */
         .imagine-section {
             background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 193, 7, 0.1));
@@ -871,143 +992,6 @@
             font-size: 1.1rem;
         }
 
-        /* ===== SECCIÓN: FORMULARIO DE CONTACTO ===== */
-        .contact-form-section {
-            background: linear-gradient(135deg, rgba(15, 32, 39, 0.95), rgba(44, 83, 100, 0.95));
-            border-left: 6px solid #40e0d0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .contact-form-section::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            left: -50px;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(64, 224, 208, 0.1) 0%, transparent 70%);
-            z-index: 0;
-        }
-        
-        .form-content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .form-title {
-            color: #40e0d0;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 10px rgba(64, 224, 208, 0.3);
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        .form-description {
-            color: #b0e0e6;
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
-        }
-        
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(64, 224, 208, 0.2);
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-            text-align: left;
-        }
-        
-        .form-group label {
-            display: block;
-            color: #7fffd4;
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            border: 2px solid rgba(64, 224, 208, 0.3);
-            border-radius: 8px;
-            background: rgba(15, 32, 39, 0.6);
-            color: #f0f8ff;
-            font-size: 1rem;
-            font-family: 'Montserrat', sans-serif;
-            transition: all 0.3s ease;
-            box-sizing: border-box;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #40e0d0;
-            background: rgba(15, 32, 39, 0.8);
-            box-shadow: 0 0 10px rgba(64, 224, 208, 0.3);
-        }
-        
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: #87ceeb;
-            opacity: 0.7;
-        }
-        
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-        
-        .submit-button {
-            display: inline-block;
-            background: linear-gradient(90deg, #40e0d0, #20b2aa);
-            color: #0f2027;
-            font-weight: 700;
-            font-size: 1.2rem;
-            padding: 1rem 3rem;
-            border-radius: 12px;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 6px 0 #1a8a7a, 0 10px 25px rgba(64, 224, 208, 0.4);
-            transition: all 0.3s ease;
-            position: relative;
-            top: 0;
-            width: 100%;
-            max-width: 300px;
-            margin-top: 1rem;
-        }
-        
-        .submit-button:hover {
-            top: -3px;
-            box-shadow: 0 8px 0 #1a8a7a, 0 15px 30px rgba(64, 224, 208, 0.6);
-            background: linear-gradient(90deg, #20b2aa, #40e0d0);
-            transform: scale(1.02);
-        }
-        
-        .submit-button:active {
-            top: 0;
-            box-shadow: 0 4px 0 #1a8a7a, 0 8px 20px rgba(64, 224, 208, 0.4);
-        }
-        
-        .form-note {
-            color: #FFD700;
-            font-size: 0.9rem;
-            margin-top: 1rem;
-            font-style: italic;
-        }
-
         /* ===== SECCIÓN: MATRIZ 3x8 ===== */
         .income-section {
             background: rgba(15, 32, 39, 0.85);
@@ -1436,17 +1420,38 @@
                 max-width: 300px;
             }
             
-            .contact-form {
-                padding: 1.5rem;
+            /* Sistema info section responsive */
+            .system-intro {
+                font-size: 1.1rem;
             }
             
-            .form-title {
-                font-size: 1.5rem;
+            .bonus-highlight {
+                font-size: 1.2rem;
+                padding: 1rem;
             }
             
-            .submit-button {
-                width: 100%;
-                max-width: 100%;
+            .point-item {
+                padding: 1rem;
+            }
+            
+            .point-number {
+                width: 32px;
+                height: 32px;
+                line-height: 32px;
+                font-size: 0.9rem;
+            }
+            
+            .point-description {
+                margin-left: 42px;
+                font-size: 0.95rem;
+            }
+            
+            .conclusion-text {
+                font-size: 1rem;
+            }
+            
+            .final-cta {
+                font-size: 1.1rem;
             }
         }
         
@@ -1496,44 +1501,6 @@
             </div>
         </header>
 
-        <!-- Formulario de Contacto -->
-        <section class="section contact-form-section">
-            <div class="form-content">
-                <h2 class="form-title">¿Listo para Comenzar?</h2>
-                <p class="form-description">
-                    Déjanos tus datos y nos pondremos en contacto contigo para guiarte en el proceso de registro y activación de tu cuenta.
-                </p>
-                
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Nombre Completo *</label>
-                        <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Correo Electrónico *</label>
-                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Teléfono (WhatsApp)</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Mensaje (Opcional)</label>
-                        <textarea id="message" name="message" placeholder="¿Tienes alguna pregunta? Escríbela aquí..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-button">Enviar Información</button>
-                    
-                    <p class="form-note">
-                        * Campos obligatorios. Tu información está segura con nosotros.
-                    </p>
-                </form>
-            </div>
-        </section>
-
         <!-- Primer video (Intro de Emily) -->
         <section class="section">
             <h2 class="section-title">Presentación Inicial</h2>
@@ -1573,11 +1540,93 @@
         <section class="section">
             <h2 class="section-title">Presentación Completa del Sistema</h2>
             <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/A8bGvBjWgkw"
+                <iframe src="https://www.youtube.com/embed/7_5J0zVVJeU?si=QHcV2J6sAXQwjx2S"
                         title="Presentación Completa del Programa AI Viral Downline"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                 </iframe>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: Información sobre el sistema -->
+        <section class="section system-info-section">
+            <div class="system-info-content">
+                <h2 class="section-title">El Sistema que Cambia Todo</h2>
+                
+                <p class="system-intro">
+                    No se trata de promesas vacías ni de "suerte".<br>
+                    Se trata de un sistema bien pensado, con números claros y un plan que funciona desde el inicio.
+                </p>
+                
+                <div class="bonus-highlight">
+                    👉 Un bono de inicio del 89.3% permite recuperar casi toda la inversión desde el primer directo.<br>
+                    <strong>¡Eso cambia completamente el juego!</strong>
+                </div>
+                
+                <h3 style="color: #FFD700; margin: 2rem 0 1.5rem; font-size: 1.3rem;">
+                    ¿Por qué esto marca la diferencia?
+                </h3>
+                
+                <div class="system-points">
+                    <div class="point-item">
+                        <span class="point-number">1️⃣</span>
+                        <span class="point-title">Retorno rápido de inversión (ROI)</span>
+                        <p class="point-description">Entrar a un proyecto y recuperar casi todo de inmediato genera confianza y acción.</p>
+                    </div>
+                    
+                    <div class="point-item">
+                        <span class="point-number">2️⃣</span>
+                        <span class="point-title">Ingresos para mantenerse activo mes a mes</span>
+                        <p class="point-description">El sistema está diseñado para que la actividad se sostenga sola, sin presión.</p>
+                    </div>
+                    
+                    <div class="point-item">
+                        <span class="point-number">3️⃣</span>
+                        <span class="point-title">Alta retención del equipo</span>
+                        <p class="point-description">Cuando las personas ven resultados reales, se quedan. Así de simple.</p>
+                    </div>
+                    
+                    <div class="point-item">
+                        <span class="point-number">4️⃣</span>
+                        <span class="point-title">Crecimiento acelerado y natural</span>
+                        <p class="point-description">Si cada directo recupera su dinero rápido, el crecimiento fluye sin forzar nada.</p>
+                    </div>
+                    
+                    <div class="point-item">
+                        <span class="point-number">5️⃣</span>
+                        <span class="point-title">Capitalización inteligente</span>
+                        <p class="point-description">Un directo al día puede representar ingresos constantes. Combinado con marketing orgánico + IA, el potencial se multiplica.</p>
+                    </div>
+                    
+                    <div class="point-item">
+                        <span class="point-number">6️⃣</span>
+                        <span class="point-title">Estructura 3×8 alcanzable</span>
+                        <p class="point-description">No en años. En meses. Con constancia y enfoque.</p>
+                    </div>
+                    
+                    <div class="point-item">
+                        <span class="point-number">7️⃣</span>
+                        <span class="point-title">Momentum real</span>
+                        <p class="point-description">Cuando varios directos viven la misma experiencia positiva, la energía se contagia y la red avanza sola.</p>
+                    </div>
+                </div>
+                
+                <div class="system-conclusion">
+                    <p class="conclusion-text">
+                        Esto no va de competir con nadie.<br>
+                        Va de hacer las cosas bien, con orden, claridad y visión a largo plazo.
+                    </p>
+                    
+                    <p class="conclusion-text">
+                        Si antes te fallaron, es entendible. A muchos nos pasó.<br>
+                        Pero cuando los números tienen sentido, la decisión se vuelve lógica.
+                    </p>
+                    
+                    <p class="final-cta">
+                        👉 El sistema trabaja. Tú solo aplicas.<br>
+                        Los resultados llegan.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -2205,29 +2254,6 @@
                 });
             });
         });
-        
-        // Manejo del formulario de contacto
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Obtener los valores del formulario
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const phone = document.getElementById('phone').value;
-                const message = document.getElementById('message').value;
-                
-                // Mostrar mensaje de confirmación
-                alert('¡Gracias por tu interés! Tu información ha sido recibida. Nos pondremos en contacto contigo pronto.');
-                
-                // Limpiar el formulario
-                contactForm.reset();
-                
-                // Opcional: Integrar con backend o sistema de email
-                // Para integración futura, los datos están disponibles en: name, email, phone, message
-            });
-        }
     </script>
 </body>
 </html>
